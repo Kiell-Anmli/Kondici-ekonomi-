@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Materi Ekonomi Masa Perjuangan</title>
+  <style>
+    :root {
+      --bg-url: url('https://img.freepik.com/free-vector/ripped-newspaper-flower-stem-old-brown-paper-banner-vector_53876-136540.jpg?semt=ais_hybrid&w=740');
+      --bg-light: rgba(255, 255, 255, 0.96);
+      --bg-dark: rgba(30, 30, 30, 0.96);
+      --text-light: #2c3e50;
+      --text-dark: #f1f1f1;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-url) no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 50px auto;
+      background: var(--bg-light);
+      color: var(--text-light);
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark .container {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .slide {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+
+    .nav {
+      position: fixed;
+      bottom: 25px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      z-index: 10;
+    }
+
+    .nav button {
+      background: #222;
+      border: none;
+      padding: 12px 18px;
+      color: white;
+      font-size: 1.2rem;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .nav button:hover {
+      background: #444;
+    }
+
+    .toggle-theme {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #333;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .penutup-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #2ecc71;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .penutup-btn:hover {
+      background: #27ae60;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-theme" onclick="toggleTheme()">Mode Terang/Gelap</button>
+
+  <div class="container">
+    <div class="slide active">
+      <h2>Kondisi Ekonomi</h2>
+      <p>Kondisi ekonomi nasional pada Masa Perjuangan sangat buruk. Hal itu ditandai oleh:</p>
+      <ul>
+        <li><strong>Inflasi tinggi:</strong> akibat mata uang Jepang dan NICA yang tidak terkendali.</li>
+        <li><strong>Blokade laut:</strong> dilakukan Belanda sejak Nov 1945 untuk memperlemah RI.</li>
+        <li><strong>Kekosongan kas negara:</strong> karena blokade dan minimnya pemasukan negara.</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2>Inflasi Tinggi</h2>
+      <p>Pemerintah belum memiliki mata uang sendiri, sehingga uang Jepang dan NICA beredar luas tanpa kontrol. Petani paling menderita karena menyimpan banyak uang Jepang yang kehilangan nilai.</p>
+    </div>
+
+    <div class="slide">
+      <h2>Blokade Ekonomi Belanda</h2>
+      <p>Blokade meliputi:</p>
+      <ul>
+        <li>Mencegah masuknya senjata & bantuan asing</li>
+        <li>Mencegah ekspor hasil perkebunan</li>
+        <li>Melemahkan ekonomi RI agar mudah dikuasai</li>
+      </ul>
+      <p>Akibatnya, RI kekurangan barang impor dan tidak bisa ekspor hasil pertanian.</p>
+    </div>
+
+    <div class="slide">
+      <h2>Kekosongan Kas Negara</h2>
+      <p>Karena ekspor terhambat, pendapatan dari pajak & bea masuk anjlok. Sementara pengeluaran negara meningkat drastis.</p>
+    </div>
+
+    <div class="slide">
+      <h2>Upaya Mengatasi Blokade</h2>
+      <ul>
+        <li><strong>Diplomasi Beras ke India:</strong> tukar beras dengan pakaian.</li>
+        <li><strong>Kontak dagang luar negeri:</strong> termasuk dengan Isbrandtsen Inc, meskipun gagal.</li>
+        <li><strong>Perdagangan lewat Sumatra:</strong> menyelundupkan karet ke Singapura untuk ditukar senjata dan obat-obatan.</li>
+        <li><strong>Pendirian Indonesia Office (1947):</strong> perwakilan resmi di Singapura untuk menembus blokade dan barter.</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2>Kebijakan Pemerintah</h2>
+      <ul>
+        <li><strong>Pinjaman Nasional (1946):</strong> diketuai Ir. Surachman, target 1 Miliar rupiah, jangka waktu 40 tahun.</li>
+        <li><strong>Konferensi Ekonomi (1946):</strong> membahas distribusi bahan pokok & nasib perkebunan.</li>
+        <li><strong>Planning Board (1947):</strong> rencana pembangunan 2–10 tahun oleh dr. A.K. Gani.</li>
+        <li><strong>RERA (1948):</strong> efisiensi militer dan penyaluran ke bidang produktif oleh Moh. Hatta.</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2>Rencana Kasimo (1948–1950)</h2>
+      <p>Fokus pada swasembada pangan, dengan langkah:</p>
+      <ul>
+        <li>Menanami tanah kosong di Sumatra Timur (281.277 ha)</li>
+        <li>Intensifikasi bibit unggul di Jawa</li>
+        <li>Mencegah penyembelihan hewan penting</li>
+        <li>Kebun bibit di setiap desa</li>
+        <li>Transmigrasi Jawa ke Sumatra</li>
+        <li>Membentuk PTE untuk giatkan ekonomi rakyat</li>
+        <li>Menerbitkan ORI & larang uang NICA (1 Okt 1946)</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2>Kesimpulan</h2>
+      <p>
+        Pada masa awal kemerdekaan, Indonesia menghadapi krisis ekonomi akibat inflasi, blokade, dan kekosongan kas negara. 
+        Di sisi politik, RI harus membuktikan eksistensinya di tengah tekanan diplomatik dan militer. 
+        Meski penuh tantangan, berbagai kebijakan strategis dan semangat rakyat menjadi pondasi untuk bertahan dan melangkah maju.
+      </p>
+      <a href="penutup.html" class="penutup-btn">Penutup</a>
+    </div>
+  </div>
+
+  <div class="nav">
+    <button onclick="changeSlide(-1)">&#8592;</button>
+    <button onclick="changeSlide(1)">&#8594;</button>
+  </div>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function changeSlide(dir) {
+      slides[current].classList.remove('active');
+      current = (current + dir + slides.length) % slides.length;
+      slides[current].classList.add('active');
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
