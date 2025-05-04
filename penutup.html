@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Penutup</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      color: white;
+      font-family: 'Courier New', monospace;
+      background-image: url('https://images.pexels.com/photos/3109671/pexels-photo-3109671.jpeg?auto=compress&cs=tinysrgb&w=400');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 700px;
+      text-align: left;
+      white-space: pre-wrap;
+    }
+
+    #text {
+      min-height: 180px;
+    }
+
+    .hashtags {
+      margin-top: 30px;
+      font-size: 0.95em;
+      line-height: 0.5;
+    }
+
+    .hashtags div {
+      margin-bottom: 4px;
+    }
+
+    .hashtags a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    .hashtags a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div id="text"></div>
+
+    <div class="hashtags">
+      <div>#indonesiaemas2045</div>
+      <div>#smkn54jakarta</div>
+      <div>#smkbisasmkhebat</div>
+      <div><a href="https://www.instagram.com/noxx.kiel?igsh=cXNkbTRqcnhwa2hx" target="_blank">#kielanomali</a></div>
+    </div>
+  </div>
+
+  <audio autoplay loop>
+    <source src="https://files.catbox.moe/q7o4g7.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const text = `Terimakasih sudah membaca materi yang telah kami sampaikan 🤗. Tentang bagaimana sih perkembangan kehidupan politik dan ekonomi di Indonesia setelah masa kemerdekaan. Jadi tuh saat Indonesia Merdeka pada tanggal 17 Agustus 1945, kondisi Indonesia itu masih kacau balau dimana-mana ges, bukan damai tentram seperti yg kita perkirakan. 😌
+
+Yah gitu deh, semoga materi ini bisa bermanfaat dan menambah wawasan kalian, dan berkeinginan menjadi anak muda Indonesia yg bermanfaat untuk kedepannya, mwhehe 😹.
+
+Dan yap, sekian dari kami mohon maaf jika ada kesalahan informasi dan kata kata, makasihh.. 🤙😜🌷`;
+
+    const target = document.getElementById("text");
+    let i = 0;
+
+    function type() {
+      if (i < text.length) {
+        target.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 40);
+      }
+    }
+
+    window.onload = type;
+  </script>
+</body>
+</html>
